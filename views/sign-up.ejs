@@ -1,0 +1,34 @@
+<div class="form-container">
+    <p class="form-title text-center">Sign Up</p>
+    <form action='/users/sign-up/' id='sign-up-form' method="post">
+        <%- include('_user-messages')%>
+        <div class="form-group">
+            <input type="name" id="name" name="name" class="form-control" placeholder=" " required
+                value="<%= locals.name  ? locals.name : '' %>" />
+            <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" class="form-control" placeholder=" " required
+                value="<%= locals.email ? email  : '' %>" />
+            <label for="email"> Email </label>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" name="password" class="form-control" placeholder=" " required
+                value="<%= locals.password ? locals.password : '' %>" />
+            <label for="password">Password</label>
+        </div>
+        <div class="form-group">
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder=" "
+                required value="<%= locals.confirmPassword ? locals.confirmPassword : '' %>" />
+            <label for="confirmPassword">Confirm Password</label>
+
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+    </form>
+    <div class="google-auth">
+        or Sign up with <a href='/users/auth/google'> <i class="fab fa-google"></i></a> instead
+    </div>
+    <div class="after-form">
+        Already a User? <a href="/users/sign-in">Sign In</a>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="form-container">
+    <p class="form-title text-center">Sign in</p>
+    <form action="/users/sign-in" method="post">
+        <%- include('_user-messages')%>
+        <div class="form-group">
+            <input type="email" id="email" name="email" class="form-control" placeholder=" " required />
+            <label for="email"> Email </label>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" name="password" class="form-control" placeholder=" " required />
+            <label for="password">Password</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+
+    </form>
+    <div class="google-auth">
+        or Sign in with <a href='/users/auth/google'> <i class="fab fa-google"></i></a> instead
+    </div>
+    <a href='/users/reset-password'>
+        <button class="btn btn-secondary btn-block">Forgot Password</button>
+    </a>
+    <div class="after-form">
+        Don't have an Account? <a href="/users/sign-up">Sign Up</a>
+    </div>
+</div>

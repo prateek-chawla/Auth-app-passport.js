@@ -1,0 +1,29 @@
+<!-- Bootstrap Dismissable alerts - User Messages -->
+<% if(locals.errors && errors.length>0) { %>
+    <% for(error of errors) { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= error%>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <% } %>
+<% } %>
+
+<% if(locals.successMsg && successMsg.length>0) { %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= successMsg %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+<% } %>
+
+<% if(locals.errorMsg && errorMsg.length>0) { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= errorMsg %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<% } %>
